@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<!-- Posts -->
+
+<div id="title">
+	<h4>Join us for our Marraige Celebration</h4>
+		<br>
+	<p><strong>When:</strong> Saturday, July 11, 2020.
+		<br>
+	<strong>Where:</strong> Vancouver, British Columbia, Canada</p>
+	<p>More details can be found <a href="/details">here</a>.</p>
+	<p>To RSVP, please fill out the form below by <strong>April 1st, 2020</strong></p>
+</div>
+
+<div style="margin-bottom:80px;">
+	<form class="rsvp" action="https://formspree.io/xvozjlwj" method="POST">
+	    <input type="text" name="email" placeholder="Your email address">
+			<input type="text" name="name" placeholder="Your name">
+			<input type="text" name="text" placeholder="Your RSVP code">
+			<input type="text" name="text" placeholder="Number in your party">
+	    <textarea type="text" name="content" rows="10" placeholder="Message"></textarea>
+	    <input type="hidden" name="_next" value="https://marybethandevan.wedding/thanks.html">
+	    <input type="hidden" name="_subject" value="New Contact Form Submission">
+	    <input type="text" name="_gotcha" style="display:none">
+	    <input type="submit" value="Submit">
+	</form>
+</div>
+
+
+<ul id="posts">
+
+	{% for post in paginator.posts %}
+
+	  <li class="post">
+	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
+      <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> <i>{{ post.date | date_to_string }}</i> </time>
+	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+	  </li>
+
+    {% endfor %}
+
+</ul>

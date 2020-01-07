@@ -1,0 +1,38 @@
+# Site settings
+title: Marybeth and Evan's Marriage
+description: "Information about Marybeth and Evan's Marriage Celebration"
+url: "https://marybethandevan.wedding"
+author:
+  name: "Evan"
+
+
+# Build settings
+baseurl: /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Custom variables
+version: "1.0.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
