@@ -377,4 +377,17 @@ form.rsvp input[type="text"], form.rsvp textarea[type="text"] { width: 50%; vert
 
 form.rsvp input[type="submit"] { display: block; margin-top: 0px; margin-left: auto; margin-right: auto; width: 15%; outline: none; color: white; background-color: #0299cb; border-radius: 3px; padding: 0.5em; border: 1px solid transparent; height: auto; }
 
+form.ccard input[type="text"], form.ccard input[type="email"], form.ccard textarea[type="text"] { width: 50%; vertical-align: middle; display: block; margin-left: auto; margin-right: auto; margin-top: 0.25em; margin-bottom: 0.75em; padding: 0.75em; font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: light; border-style: solid; border-color: #444; outline-color: #0299cb; border-width: 1px; border-radius: 3px; transition: box-shadow .2s ease; }
+
+form.ccard input[type="submit"] { display: block; margin-top: 0px; margin-left: auto; margin-right: auto; width: 15%; outline: none; color: white; background-color: #0299cb; border-radius: 3px; padding: 0.5em; border: 1px solid transparent; height: auto; }
+
+.blinking { animation: blinkingText 1.2s infinite; }
+
+@keyframes blinkingText { 0% { color: #000; }
+  35% { color: #000; }
+  50% { color: transparent; }
+  60% { color: transparent; }
+  80% { color: transparent; }
+  100% { color: #000; } }
+
 /*# sourceMappingURL=main.css.map */
