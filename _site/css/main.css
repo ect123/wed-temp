@@ -390,4 +390,6 @@ form.ccard input[type="submit"] { display: block; margin-top: 0px; margin-left: 
   80% { color: transparent; }
   100% { color: #000; } }
 
+#mapcontainer { height: 400px; position: relative; margin-bottom: 40px; }
+
 /*# sourceMappingURL=main.css.map */
